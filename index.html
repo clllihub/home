@@ -50,18 +50,45 @@
     <div class="mini-player">
       <div class="track_info_wrapper">
         <div class="track_info">
-          <div class="thumb"></div>
+          <div class="thumb"
+            style="background-image: url('https://cllli.oss-cn-beijing.aliyuncs.com/icon/shouchang.png'); background-color: transparent;">
+          </div>
           <div class="info">
-            <div class="title">Friday Comes</div>
-            <div class="artist">Early</div>
           </div>
         </div>
       </div>
-      <div class="mini-player_btn_wrapper"><i class="btn-prev fa fa-step-backward" aria-hidden="true"></i>
-        <div class="btn-switch"><i class="btn-play fa fa-play" aria-hidden="true"></i><i class="btn-pause fa fa-pause"
-            aria-hidden="true"></i></div><i class="btn-next fa fa-step-forward" aria-hidden="true"></i><i
-          class="btn-open-player fa fa-list" aria-hidden="true"></i>
+
+      <style>
+        .mini-player_btn_wrapper {
+          display: flex;
+          /* 使用 Flexbox 布局 */
+          justify-content: space-between;
+          /* 将图标平均分布在容器中 */
+        }
+
+        .icon-img {
+          width: 30px;
+          /* 设置图标宽度 */
+          height: 30px;
+          /* 设置图标高度 */
+          margin-right: 20px;
+          /* 设置图标之间的右侧间距 */
+        }
+
+        /* 最后一个图标不需要右侧间距 */
+        .icon-img:last-child {
+          margin-right: 10;
+        }
+      </style>
+
+      <div class="mini-player_btn_wrapper">
+        <a href="https://weibo.com/u/6124296623"><img src="https://cllli.oss-cn-beijing.aliyuncs.com/icon/weibo.png"
+            alt="Icon 1" class="icon-img"></a>
+        <a href="https://space.bilibili.com/295300559"><img
+            src="https://cllli.oss-cn-beijing.aliyuncs.com/icon/bilibili.png" alt="Icon 2" class="icon-img"></a>
       </div>
+
+
     </div>
     <div class="dim"></div>
     <div class="player" id="player">
@@ -69,81 +96,143 @@
         <div class="playback_blur"></div>
         <div class="playback_thumb"></div>
         <div class="playback_info">
-          <div class="title">Friday Comes</div>
-          <div class="artist">Early</div>
+          <div class="title">收藏夹</div>
+          <div class="artist">网站</div>
         </div>
-        <div class="playback_btn_wrapper"><i class="btn-prev fa fa-step-backward" aria-hidden="true"></i>
-          <div class="btn-switch"><i class="btn-play fa fa-play" aria-hidden="true"></i><i class="btn-pause fa fa-pause"
-              aria-hidden="true"></i></div><i class="btn-next fa fa-step-forward" aria-hidden="true"></i>
-        </div>
+
         <div class="playback_timeline">
-          <div class="playback_timeline_start-time">00:31</div>
+          <div class="playback_timeline_start-time">2019</div>
           <div class="playback_timeline_slider">
             <div class="slider_base"></div>
-            <div class="slider_progress"></div>
-            <div class="slider_handle"></div>
+
           </div>
-          <div class="playback_timeline_end-time">03:11</div>
+          <div class="playback_timeline_end-time">2024</div>
         </div>
       </div>
       <div class="list_wrapper">
         <ul class="list">
-          <li class="list_item selected">
+          <li class="list_item">
             <div class="thumb"> </div>
             <div class="info">
-              <div class="title">Friday Comes</div>
-              <div class="artist">Early</div>
+              <div class="title"><a href="https://cc0textures.com"><i
+                    class="https://media.indiedb.com/images/members/4/3013/3012553/ao_sketchfab-logo-mark.jpg"></i>
+                  cc0textures</a></div>
+              <div class="artist">CC0纹理-免费的公共领域PBR材料</div>
             </div>
           </li>
           <li class="list_item">
             <div class="thumb"> </div>
             <div class="info">
-              <div class="title">Friday Comes</div>
-              <div class="artist">Early</div>
+              <div class="title"><a href="https://sketchfab.com"><i class="fas fa-cube"></i>Sketchfab</a></div>
+              <div class="artist">3D模型</div>
             </div>
           </li>
           <li class="list_item">
             <div class="thumb"> </div>
             <div class="info">
-              <div class="title">Friday Comes</div>
-              <div class="artist">Early</div>
+              <div class="title"><a href="https://hdrihaven.com"><i class="fas fa-image"></i>hdrihaven</a>
+              </div>
+              <div class="artist">HDR贴图</div>
             </div>
           </li>
           <li class="list_item">
             <div class="thumb"> </div>
             <div class="info">
-              <div class="title">Friday Comes</div>
-              <div class="artist">Early</div>
+              <div class="title"><a href="https://www.iconfont.cn"><i class="fas fa-image"></i>Iconfont</a>
+              </div>
+              <div class="artist">阿里巴巴矢量图标库</div>
             </div>
           </li>
           <li class="list_item">
             <div class="thumb"> </div>
             <div class="info">
-              <div class="title">Friday Comes</div>
-              <div class="artist">Early</div>
+              <div class="title"><a href="https://snapdrop.net"><i class="fas fa-wifi"></i>Snapdrop</a></div>
+              <div class="artist">局域网文件传输工具</div>
             </div>
           </li>
           <li class="list_item">
             <div class="thumb"> </div>
             <div class="info">
-              <div class="title">Friday Comes</div>
-              <div class="artist">Early</div>
+              <div class="title"><a href="https://www.mixamo.com"><i class="fas fa-user-friends"></i>Mixamo</a>
+              </div>
+              <div class="artist">3D 角色动画在线生成平台</div>
             </div>
           </li>
           <li class="list_item">
             <div class="thumb"> </div>
             <div class="info">
-              <div class="title">Friday Comes</div>
-              <div class="artist">Early</div>
+              <div class="title"><a href="https://onlineconvertfree.com"><i
+                    class="fas fa-file-image"></i>onlineconvertfree</a></div>
+              <div class="artist">在线将JPG 转换成HDR。 免费将.jpg 转换成.hdr。</div>
             </div>
           </li>
           <li class="list_item">
             <div class="thumb"> </div>
             <div class="info">
-              <div class="title">Friday Comes</div>
-              <div class="artist">Early</div>
+              <div class="title"><a href="https://spacedesk.net"><i class="fas fa-desktop"></i>Spacedesk</a>
+              </div>
+              <div class="artist">多显示器应用</div>
             </div>
           </li>
+
+
+          <li class="list_item">
+            <div class="thumb"> </div>
+            <div class="info">
+              <div class="title"><a href="https://sms-activate.org/cn"><i class="fas fa-cube"></i>SMS</a></div>
+              <div class="artist">在线接受短信的虚拟号码服务</div>
+            </div>
+          </li>
+          <li class="list_item">
+            <div class="thumb"> </div>
+            <div class="info">
+              <div class="title"><a href="https://www.openstreetmap.org/"><i class="fas fa-image"></i>openstreetmap</a>
+              </div>
+              <div class="artist">在线查看编辑GIS地图</div>
+            </div>
+          </li>
+          <li class="list_item">
+            <div class="thumb"> </div>
+            <div class="info">
+              <div class="title"><a href="https://wormhole.app"><i class="fas fa-image"></i>Wormhole</a>
+              </div>
+              <div class="artist">简单、私密的文件共享</div>
+            </div>
+          </li>
+          <li class="list_item">
+            <div class="thumb"> </div>
+            <div class="info">
+              <div class="title"><a href="https://www.unrealengine.com/"><i class="fas fa-wifi"></i>MetaHuman</a></div>
+              <div class="artist">轻松制作高保真数字人类</div>
+            </div>
+          </li>
+          <li class="list_item">
+            <div class="thumb"> </div>
+            <div class="info">
+              <div class="title"><a href="https://analytics.google.com"><i class="fas fa-user-friends"></i>Google
+                  Analytics</a>
+              </div>
+              <div class="artist">网站分析工具</div>
+            </div>
+          </li>
+          <li class="list_item">
+            <div class="thumb"> </div>
+            <div class="info">
+              <div class="title"><a href="https://www.speedtest.net"><i class="fas fa-file-image"></i>Speedtest</a>
+              </div>
+              <div class="artist">全球宽带速度测试</div>
+            </div>
+          </li>
+          <li class="list_item">
+            <div class="thumb"> </div>
+            <div class="info">
+              <div class="title"><a href="https://coolors.co/"><i class="fas fa-file-image"></i>colors</a>
+              </div>
+              <div class="artist">配色</div>
+            </div>
+          </li>
+
+
         </ul>
       </div>
     </div>
@@ -195,15 +284,17 @@
             </div>
           </a>
           <a href="https://example-link-for-item-2.com/" class="item">
-            <div class="thumb" style="background-image: url('https://cllli.oss-cn-beijing.aliyuncs.com/icon/sco.jpg');">
+            <div class="thumb"
+              style="background-image: url('https://topbestalternative.com/wp-content/uploads/2020/03/infuse-logo-1536x1536.png');">
             </div>
             <div class="info">
-              <div class="name">Fantasy</div>
+              <div class="name">影片</div>
 
             </div>
           </a>
           <a href="https://example-link-for-item-2.com/" class="item">
-            <div class="thumb" style="background-image: url('https://cllli.oss-cn-beijing.aliyuncs.com/icon/sco.jpg');">
+            <div class="thumb"
+              style="background-image: url('https://cllli.oss-cn-beijing.aliyuncs.com/icon/file.jpg');">
             </div>
             <div class="info">
               <div class="name">Fantasy</div>
