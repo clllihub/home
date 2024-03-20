@@ -371,7 +371,7 @@ body {
   width: 600px;
   height: 100%;
   background-color: #fff;
-  box-shadow: 0px 25px 60px 0px rgba(97, 45, 45, 0.4);
+  box-shadow: 0px 25px 60px 0px rgba(159, 186, 228, 0.4);
   font-size: 14px;
   z-index: 999;
 }
@@ -380,7 +380,7 @@ body {
   height: 310px;
   position: relative;
   overflow: hidden;
-  background-color: #fff9e1;
+  background-color: #ffffff00;
 }
 
 .playback_blur {
@@ -392,7 +392,7 @@ body {
   transform: scale(1.1);
   filter: blur(32px);
   opacity: 0.24;
-  background-image: url(https://i1.sndcdn.com/artworks-000167527289-p3zpfg-large.jpg);
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/photography/1/22.jpg);
 }
 
 .playback_thumb {
@@ -403,8 +403,9 @@ body {
   background-size: cover;
   position: absolute;
   margin: 35px;
-  box-shadow: 0px 12px 30px 0px rgba(97, 45, 45, 0.2);
-  background-image: url(https://i1.sndcdn.com/artworks-000167527289-p3zpfg-t500x500.jpg);
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
+  /* 添加阴影效果 */
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/shouchang.png);
 }
 
 .playback_info {
@@ -479,7 +480,7 @@ body {
 .playback_timeline_slider .slider_base {
   width: 100%;
   height: 2px;
-  background-color: rgba(37, 33, 32, 0.12);
+  background-color: rgba(33, 32, 37, 0.12);
   border-radius: 2px;
   position: absolute;
   top: 12px;
@@ -541,7 +542,7 @@ body {
 
 .list .info .title {
   font-size: 15px;
-  color: #999;
+  color: #121212;
 }
 
 .list .info .artist {
@@ -551,7 +552,8 @@ body {
 }
 
 .list_item:hover {
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgba(38, 108, 200, 0.047);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .list_item:active {
@@ -559,35 +561,71 @@ body {
 }
 
 .list .list_item:nth-child(1) .thumb {
-  background-image: url(https://i1.sndcdn.com/artworks-000167527289-p3zpfg-large.jpg);
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/Favorites/cc0textures.png);
 }
 
 .list .list_item:nth-child(2) .thumb {
-  background-image: url(https://i1.sndcdn.com/artworks-000149308680-w9rj6a-large.jpg);
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/Favorites/Sketchfab.png);
 }
 
 .list .list_item:nth-child(3) .thumb {
-  background-image: url(https://i1.sndcdn.com/artworks-000091003491-upr0rf-large.jpg);
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/Favorites/hdrihaven.png);
 }
 
 .list .list_item:nth-child(4) .thumb {
-  background-image: url(https://i1.sndcdn.com/artworks-000125642440-o2ff73-large.jpg);
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/Favorites/Iconfont.png);
 }
 
 .list .list_item:nth-child(5) .thumb {
-  background-image: url(https://i1.sndcdn.com/artworks-000174340505-wv6dl1-large.jpg);
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/Favorites/snapdrop.png);
 }
 
 .list .list_item:nth-child(6) .thumb {
-  background-image: url(https://i1.sndcdn.com/artworks-000169142537-e22x2o-large.jpg);
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/Favorites/Mixamo.png);
 }
 
 .list .list_item:nth-child(7) .thumb {
-  background-image: url(https://i1.sndcdn.com/artworks-000180119811-wgpequ-large.jpg);
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/Favorites/onlineconvertfree.png);
 }
 
 .list .list_item:nth-child(8) .thumb {
-  background-image: url(https://i1.sndcdn.com/artworks-000133986066-hf1rz6-large.jpg);
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/Favorites/Spacedesk.png);
+}
+
+.list .list_item:nth-child(9) .thumb {
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/Favorites/SMS.png);
+}
+
+.list .list_item:nth-child(10) .thumb {
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/Favorites/openstreetmap.png);
+}
+
+.list .list_item:nth-child(11) .thumb {
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/Favorites/Wormhole.png);
+}
+
+.list .list_item:nth-child(12) .thumb {
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/Favorites/MetaHuman.png);
+}
+
+.list .list_item:nth-child(13) .thumb {
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/Favorites/Analytics.png);
+}
+
+.list .list_item:nth-child(14) .thumb {
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/Favorites/Speedtest.png);
+}
+
+.list .list_item:nth-child(15) .thumb {
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/Favorites/colors.png);
+}
+
+.list .list_item:nth-child(16) .thumb {
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/Favorites/magic.png);
+}
+
+.list .list_item:nth-child(17) .thumb {
+  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/Favorites/civitai.png);
 }
 
 .selected {
