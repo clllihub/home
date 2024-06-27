@@ -557,6 +557,14 @@ body {
   background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/Favorites/civitai.png);
 }
 
+.list .list_item:nth-child(18) .thumb {
+  background-image: url(https://resourceboy.com//apple-touch-icon.png);
+}
+
+.list .list_item:nth-child(19) .thumb {
+  background-image: url(https://pushkeen.ai/favicon.ico);
+}
+
 .selected {
   background-color: rgba(224, 186, 171, 0.19);
 }
