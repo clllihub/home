@@ -10,6 +10,7 @@ let images = [
   "https://cllli.oss-cn-beijing.aliyuncs.com/background/3.jpg",
   "https://cllli.oss-cn-beijing.aliyuncs.com/background/4.jpg",
   "https://cllli.oss-cn-beijing.aliyuncs.com/background/5.jpg",
+  "https://cllli.oss-cn-beijing.aliyuncs.com/background/6.jpg",
   "https://cllli.oss-cn-beijing.aliyuncs.com/background/7.jpg"
 ];
 let current = 0;
