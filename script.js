@@ -1,15 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-	function setBackground() {
-		var hour = new Date().getHours();
-		var body = document.body;
-		if (hour >= 19 && hour < 6) {
-			body.style.backgroundImage = "url('https://cllli.oss-cn-beijing.aliyuncs.com/background/night.jpg')"; // 白天背景图片
-		} else {
-			body.style.backgroundImage = "url('https://cllli.oss-cn-beijing.aliyuncs.com/background/day.jpg')"; // 晚上背景图片
-		}
-	}
-	setBackground();
-});
 
 // ===== Open Nav =====
 $(".burger-wrapper").click(function () {
