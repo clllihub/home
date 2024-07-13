@@ -164,10 +164,16 @@ $('.text-wrap .text').click(function () {
 
 // ===== Curation Page to Playlist Page
 
+document.addEventListener("DOMContentLoaded", function () {
+    if (isMobileDevice()) {
+        requestFullScreen();
+    }
+});
+
 function requestFullScreen() {
     let docEl = document.documentElement;
     let requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
-    
+
     if (requestFullScreen) {
         if (requestFullScreen === docEl.webkitRequestFullScreen) {
             // For WebKit browsers (Chrome, Safari)
@@ -177,3 +183,4 @@ function requestFullScreen() {
         }
     }
 }
+
