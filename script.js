@@ -163,3 +163,17 @@ $('.text-wrap .text').click(function () {
 
 
 // ===== Curation Page to Playlist Page
+
+function requestFullScreen() {
+    let docEl = document.documentElement;
+    let requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+    
+    if (requestFullScreen) {
+        if (requestFullScreen === docEl.webkitRequestFullScreen) {
+            // For WebKit browsers (Chrome, Safari)
+            requestFullScreen.call(docEl, Element.ALLOW_KEYBOARD_INPUT);
+        } else {
+            requestFullScreen.call(docEl);
+        }
+    }
+}
