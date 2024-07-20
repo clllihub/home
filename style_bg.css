@@ -2,65 +2,66 @@ html,
 body {
   padding: 0;
   margin: 0;
-  overflow: hidden;
-  font-family: "Sen";
+  overflow: hidden; /* 隐藏溢出的内容 */
+  font-family: "Sen"; /* 使用'Sen'字体 */
 }
 * {
   box-sizing: border-box;
   outline: none;
   -webkit-tap-highlight-color: transparent;
-  cursor: none;
-  user-select: none;
-  -webkit-user-drag: none;
+  cursor: none; /* 隐藏默认光标 */
+  user-select: none; /* 禁止文本选择 */
+  -webkit-user-drag: none; /* 禁止拖动 */
 }
 #main {
-  display: flex;
+  display: flex; /* 使用Flexbox布局 */
 }
 #main .part {
-  flex: 1;
+  flex: 1; /* 每个部分占据相等的空间 */
 }
 #main .part .section {
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* 每个部分的高度为视口高度 */
   position: relative;
   overflow: hidden;
 }
-#main .part .section img {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
+#main .part .section img,
+#main .part .section video {
+  width: 100vw; /* 图片或视频宽度为视口宽度 */
+  height: 100vh; /* 图片或视频高度为视口高度 */
+  object-fit: cover; /* 保持比例，覆盖整个容器 */
   position: absolute;
-  left: var(--x);
-  pointer-events: none;
+  left: var(--x); /* 动态设置左边距 */
+  pointer-events: none; /* 禁用鼠标事件 */
 }
 .cursor {
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
+  width: var(--size); /* 动态设置光标的宽度 */
+  height: var(--size); /* 动态设置光标的高度 */
+  border-radius: 50%; /* 圆形光标 */
   background: white;
   position: absolute;
-  z-index: 999;
-  pointer-events: none;
-  mix-blend-mode: difference;
+  z-index: 999; /* 确保光标在最上层 */
+  pointer-events: none; /* 禁用光标的鼠标事件 */
+  mix-blend-mode: difference; /* 使用差值混合模式 */
 }
 .cursor-f {
-  width: var(--size);
-  height: var(--size);
+  width: var(--size); /* 动态设置跟随光标的宽度 */
+  height: var(--size); /* 动态设置跟随光标的高度 */
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='47' height='47' viewBox='0 0 47 47' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M42.4202 42.4202C38.8403 46 33.3594 46 23.5 46C13.6406 46 8.15966 46 4.57983 42.4202C1 38.8403 1 33.3594 1 23.5C1 13.6406 1 8.15966 4.57983 4.57983C8.15966 1 13.6406 1 23.5 1C33.3594 1 38.8403 1 42.4202 4.57983C46 8.15966 46 13.6406 46 23.5C46 33.3594 46 38.8403 42.4202 42.4202Z' stroke='white'/%3E%3C/svg%3E%0A");
-  background-size: cover;
-  mix-blend-mode: difference;
-  pointer-events: none;
-  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg width='47' height='47' viewBox='0 0 47 47' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M42.4202 42.4202C38.8403 46 33.3594 46 23.5 46C13.6406 46 8.15966 46 4.57983 42.4202C1 38.8403 1 33.3594 1 23.5C1 13.6406 1 8.15966 4.57983 4.57983C8.15966 1 13.6406 1 23.5 1C33.3594 1 38.8403 1 42.4202 4.57983C46 8.15966 46 13.6406 46 23.5C46 33.3594 46 38.8403 42.4202 42.4202Z' stroke='white'/%3E%3C/svg%3E%0A"); /* 光标背景图 */
+  background-size: cover; /* 背景图覆盖 */
+  mix-blend-mode: difference; /* 使用差值混合模式 */
+  pointer-events: none; /* 禁用光标的鼠标事件 */
+  opacity: 0.5; /* 设置透明度 */
 }
 .buttons {
   position: absolute;
-  right: 25px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 99;
+  right: 25px; /* 按钮右边距 */
+  top: 50%; /* 按钮顶部对齐到容器中部 */
+  transform: translateY(-50%); /* 垂直居中 */
+  z-index: 99; /* 确保按钮在最上层 */
 }
 .buttons button {
   border: none;
@@ -75,13 +76,13 @@ body {
   transition-duration: 0.6s;
 }
 .buttons button.next {
-  transform: scaleY(-1);
+  transform: scaleY(-1); /* 翻转按钮 */
 }
 .buttons button.prev:active {
-  transform: translateY(8px);
+  transform: translateY(8px); /* 按钮按下时向下移动 */
 }
 .buttons button.next:active {
-  transform: scaleY(-1) translateY(8px);
+  transform: scaleY(-1) translateY(8px); /* 翻转按钮并向下移动 */
 }
 h1 {
   position: absolute;
@@ -129,5 +130,3 @@ h1 {
 .content a:hover {
   padding-bottom: 1px;
 }
-
-
