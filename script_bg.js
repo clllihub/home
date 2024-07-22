@@ -6,9 +6,9 @@ let parts = []; // 存储部分的数组
 // 图片和视频数组
 let media = [
   {type: 'img', src: "https://cllli.oss-cn-beijing.aliyuncs.com/background/1.jpg"},
-  {type: 'video', src: "https://ossoososssn.oss-cn-beijing.aliyuncs.com/video/bg.mov"},
   {type: 'img', src: "https://cllli.oss-cn-beijing.aliyuncs.com/background/5.jpg"},
-  {type: 'img', src: "https://cllli.oss-cn-beijing.aliyuncs.com/background/7.jpg"}
+  {type: 'img', src: "https://cllli.oss-cn-beijing.aliyuncs.com/background/7.jpg"},
+    {type: 'video', src: "https://ossoososssn.oss-cn-beijing.aliyuncs.com/video/bg.mov"}
 ];
 let current = 0; // 当前显示的媒体索引
 let playing = false; // 动画是否正在播放的标志
