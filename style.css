@@ -1,4 +1,25 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:300,400,700");
+/* 定义透明度渐入动画，仅用于 iframe */
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 定义透明度和位置渐入动画，用于其他元素 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(3px); /* 初始时稍微下移 */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); /* 逐渐上升，透明度逐渐增加 */
+  }
+}
 
 i[class^=btn] {
   font-size: 20px;
@@ -24,8 +45,9 @@ a {
 html,
 body {
   margin: 0;
-  padding: 0;
-  overflow: hidden; /* Prevent scrollbars */
+  font-family: Arial, sans-serif;
+  background: url('your-background-image.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 iframe {
@@ -35,6 +57,7 @@ iframe {
   width: 100%;
   height: 100%;
   border: none; /* Optional: remove iframe border */
+  animation: fadeInOpacity 0.5s ease-out; /* 仅透明度渐入动画 */
 }
 
 @keyframes drift {
@@ -72,16 +95,17 @@ iframe {
 }
 
 .header .burger-wrapper {
-  width: 35px; /* 设置合适的宽度 */
-  height: 35px; /* 设置合适的高度 */
+  width: 45px; /* 设置合适的宽度 */
+  height: 45px; /* 设置合适的高度 */
   margin-right: 20px;
   display: flex;
   align-items: center;
+  animation: fadeIn  0.8s ease-out; /* 渐入动画 */
 }
 
 .header .burger-icon {
-  width: 35px; /* 设置图标宽度 */
-  height: 35px; /* 设置图标高度 */
+  width: 45px; /* 设置图标宽度 */
+  height: 45px; /* 设置图标高度 */
   background-image: url('https://ossoososssn.oss-cn-beijing.aliyuncs.com/files/icon/about-logo.svg'); /* 自定义图标路径 */
   background-size: contain; /* 适应背景图像 */
   background-repeat: no-repeat;
@@ -207,6 +231,7 @@ iframe {
   border-right: 1px solid rgba(24, 38, 69, 0.11);
   margin-right: 23px;
   padding-right: 30px;
+  
 }
 
 .track_info_wrapper .track_info {
@@ -214,6 +239,8 @@ iframe {
   align-items: center;
   cursor: pointer;
   opacity: 1;
+  animation: fadeIn  0.8s ease-out; /* 渐入动画 */
+  
 }
 
 .track_info_wrapper .track_info .thumb {
@@ -224,6 +251,8 @@ iframe {
   border-radius: 2px;
   background-size: cover;
   background-image: url(https://i1.sndcdn.com/artworks-000167527289-p3zpfg-large.jpg);
+  border-radius: 20%;
+  /* 设置圆角 */
 }
 
 .track_info_wrapper .track_info .title {
@@ -239,6 +268,7 @@ iframe {
   text-overflow: ellipsis;
   font-size: 12px;
   color: rgba(37, 33, 32, 0.7);
+  
 }
 
 .mini-player_btn_wrapper {
@@ -279,6 +309,31 @@ iframe {
   display: none;
   z-index: 2;
   opacity: 0;
+}
+
+.mini-player_btn_wrapper {
+  display: flex;
+  /* 使用 Flexbox 布局 */
+  justify-content: space-between;
+  /* 将图标平均分布在容器中 */
+    animation: fadeIn  0.8s ease-out; /* 渐入动画 */
+}
+
+.icon-img {
+  width: 30px;
+  /* 设置图标宽度 */
+  height: 30px;
+  /* 设置图标高度 */
+  margin-right: 20px;
+  /* 设置图标之间的右侧间距 */
+  border-radius: 20%;
+  /* 设置圆角 */
+
+}
+
+/* 最后一个图标不需要右侧间距 */
+.icon-img:last-child {
+  margin-right: 10;
 }
 
 .player {
@@ -324,7 +379,9 @@ iframe {
   margin: 35px;
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
   /* 添加阴影效果 */
-  background-image: url(https://cllli.oss-cn-beijing.aliyuncs.com/icon/shouchang.png);
+  border-radius: 20%;
+  /* 设置圆角 */
+  background-image: url(https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/b6/c0/6e/b6c06e02-d83a-6b06-f5af-790c316720ea/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/460x0w.png);
 }
 
 .playback_info {
