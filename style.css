@@ -85,6 +85,13 @@ iframe {
   background-image: url('https://ossoososssn.oss-cn-beijing.aliyuncs.com/files/icon/about-logo.svg'); /* 自定义图标路径 */
   background-size: contain; /* 适应背景图像 */
   background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.4s ease-out, filter 0.4s ease-out; /* 更加平滑的过渡 */
+}
+
+.header .burger-wrapper:hover .burger-icon {
+  transform: scale(1.05); /* 轻微放大效果 */
+  filter: brightness(1.2); /* 增强亮度 */
 }
 
 .header .burger:before {
