@@ -72,28 +72,19 @@ iframe {
 }
 
 .header .burger-wrapper {
-  width: 20px;
-  height: 30px;
+  width: 35px; /* 设置合适的宽度 */
+  height: 35px; /* 设置合适的高度 */
   margin-right: 20px;
   display: flex;
   align-items: center;
 }
 
-.header .burger {
-  width: 20px;
-  height: 3px;
-  background-color: #252120;
-  position: relative;
-}
-
-.header .burger:before,
-.header .burger:after {
-  content: "";
-  width: 20px;
-  height: 3px;
-  background-color: #252120;
-  position: absolute;
-  left: 0;
+.header .burger-icon {
+  width: 35px; /* 设置图标宽度 */
+  height: 35px; /* 设置图标高度 */
+  background-image: url('https://ossoososssn.oss-cn-beijing.aliyuncs.com/files/icon/about-logo.svg'); /* 自定义图标路径 */
+  background-size: contain; /* 适应背景图像 */
+  background-repeat: no-repeat;
 }
 
 .header .burger:before {
