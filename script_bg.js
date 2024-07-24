@@ -7,7 +7,7 @@ let mediaArray = [
   {type: 'img', src: "https://cllli.oss-cn-beijing.aliyuncs.com/background/1.jpg"},
   {type: 'img', src: "https://cllli.oss-cn-beijing.aliyuncs.com/background/5.jpg"},
   {type: 'img', src: "https://cllli.oss-cn-beijing.aliyuncs.com/background/7.jpg"},
-  {type: 'video', src: "https://ossoososssn.oss-cn-beijing.aliyuncs.com/video/bg.mov"}
+  {type: 'video', src: "https://ossoososssn.oss-cn-beijing.aliyuncs.com/video/bg.mp4"}
 ];
 let currentMediaIndex = 0; // 当前显示的媒体索引
 let isPlaying = false; // 动画是否正在播放的标志
