@@ -102,6 +102,7 @@ function switchMedia(direction) {
 
 // 键盘事件监听器
 window.addEventListener('keydown', function(e) {
+  resetInactivityTimer();
   if (['ArrowDown', 'ArrowRight'].includes(e.key)) {
     switchMedia(1);
   } else if (['ArrowUp', 'ArrowLeft'].includes(e.key)) {
@@ -139,6 +140,7 @@ cursor.style.setProperty('--size', cursorSize + 'px');
 cursorFollower.style.setProperty('--size', followerSize + 'px');
 
 window.addEventListener('mousemove', function(e) {
+  resetInactivityTimer();
   mouseX = e.clientX;
   mouseY = e.clientY;
   cursor.style.left = e.clientX - cursorSize / 2 + 'px';
@@ -160,6 +162,7 @@ let endY;
 let isClicked = false;
 
 function onMouseDown(e) {
+  resetInactivityTimer();
   gsap.to(cursor, {scale: 4.5});
   gsap.to(cursorFollower, {scale: 0.4});
   isClicked = true;
@@ -167,6 +170,7 @@ function onMouseDown(e) {
 }
 
 function onMouseUp(e) {
+  resetInactivityTimer();
   gsap.to(cursor, {scale: 1});
   gsap.to(cursorFollower, {scale: 1});
   endY = e.clientY || endY;
@@ -182,6 +186,7 @@ window.addEventListener('mousedown', onMouseDown, false);
 window.addEventListener('touchstart', onMouseDown, false);
 window.addEventListener('touchmove', function(e) {
   if (isClicked) {
+    resetInactivityTimer();
     endY = e.touches[0].clientY || e.targetTouches[0].clientY;
   }
 }, false);
@@ -191,6 +196,7 @@ window.addEventListener('mouseup', onMouseUp, false);
 let scrollTimeout;
 
 function onScroll(e) {
+  resetInactivityTimer();
   clearTimeout(scrollTimeout);
   setTimeout(function() {
     if (e.deltaY < -40) {
@@ -203,3 +209,20 @@ function onScroll(e) {
 
 window.addEventListener('mousewheel', onScroll, false);
 window.addEventListener('wheel', onScroll, false);
+
+// 设置自动播放视频的计时器
+let inactivityTimeout;
+
+function resetInactivityTimer() {
+  clearTimeout(inactivityTimeout);
+  inactivityTimeout = setTimeout(function() {
+    let videoIndex = mediaArray.findIndex(media => media.type === 'video');
+    if (videoIndex !== -1) {
+      currentMediaIndex = videoIndex;
+      switchMedia(0);
+    }
+  }, 10000); // 15秒后自动播放视频
+}
+
+// 初始化时重置计时器
+resetInactivityTimer();
