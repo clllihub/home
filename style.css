@@ -104,8 +104,8 @@ iframe {
 }
 
 .header .burger-icon {
-  width: 45px; /* 设置图标宽度 */
-  height: 45px; /* 设置图标高度 */
+  width: 35px; /* 设置图标宽度 */
+  height: 35px; /* 设置图标高度 */
   background-image: url('https://ossoososssn.oss-cn-beijing.aliyuncs.com/files/icon/about-logo.svg'); /* 自定义图标路径 */
   background-size: contain; /* 适应背景图像 */
   background-repeat: no-repeat;
