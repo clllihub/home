@@ -9,8 +9,7 @@ let mediaArray = [
   {type: 'img', src: "https://cllli.oss-cn-beijing.aliyuncs.com/background/1.jpg"},
   {type: 'img', src: "https://cllli.oss-cn-beijing.aliyuncs.com/background/12.jpg"},
   {type: 'img', src: "https://cllli.oss-cn-beijing.aliyuncs.com/background/9.jpg"},
-  {type: 'img', src: "https://cllli.oss-cn-beijing.aliyuncs.com/background/7.jpg"},
-  {type: 'video', src: "https://ossoososssn.oss-cn-beijing.aliyuncs.com/video/bg.mp4"}
+  {type: 'img', src: "https://cllli.oss-cn-beijing.aliyuncs.com/background/7.jpg"}
 ];
 let currentMediaIndex = 0; // 当前显示的媒体索引
 let isPlaying = false; // 动画是否正在播放的标志
@@ -224,7 +223,7 @@ function resetInactivityTimer() {
       currentMediaIndex = videoIndex;
       switchMedia(0);
     }
-  }, 200000); // 200秒后自动播放视频
+  }, 20000); // 20秒后自动播放视频
 }
 
 // 初始化时重置计时器
