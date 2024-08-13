@@ -224,7 +224,7 @@ function resetInactivityTimer() {
       currentMediaIndex = videoIndex;
       switchMedia(0);
     }
-  }, 20000); // 20秒后自动播放视频
+  }, 200000); // 200秒后自动播放视频
 }
 
 // 初始化时重置计时器
